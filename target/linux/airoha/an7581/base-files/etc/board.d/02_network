@@ -7,11 +7,15 @@ airoha_setup_interfaces()
 	local board="$1"
 
 	case "$board" in
+
 		gemtek,w1700k)
 			ucidef_set_interfaces_lan_wan "lan2 lan3 lan4" "wan"
 			;;
+		bell,*040g*)
+			ucidef_set_interfaces_lan_wan "lan2 lan3 lan4" "eth1"
+			;;
 		*)
-			ucidef_set_interface_lan "lan1 lan2 lan3 lan4"
+			ucidef_set_interfaces_lan "lan1 lan2 lan3 lan4"
 			;;
 	esac
 }
