@@ -1,6 +1,51 @@
 ![OpenWrt logo](include/logo.png)
 
- 贝尔xg-040g-md 适用复旦微闪存
+OpenWrt Project is a Linux operating system targeting embedded devices. Instead
+of trying to create a single, static firmware, OpenWrt provides a fully
+writable filesystem with package management. This frees you from the
+application selection and configuration provided by the vendor and allows you
+to customize the device through the use of packages to suit any application.
+For developers, OpenWrt is the framework to build an application without having
+to build a complete firmware around it; for users this means the ability for
+full customization, to use the device in ways never envisioned.
+
+Sunshine!
+
+## Download
+
+Built firmware images are available for many architectures and come with a
+package selection to be used as WiFi home router. To quickly find a factory
+image usable to migrate from a vendor stock firmware to OpenWrt, try the
+*Firmware Selector*.
+
+* [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/)
+
+If your device is supported, please follow the **Info** link to see install
+instructions or consult the support resources listed below.
+
+## 
+
+An advanced user may require additional or specific package. (Toolchain, SDK, ...) For everything else than simple firmware download, try the wiki download page:
+
+* [OpenWrt Wiki Download](https://openwrt.org/downloads)
+
+## Development
+
+To build your own firmware you need a GNU/Linux, BSD or macOS system (case
+sensitive filesystem required). Cygwin is unsupported because of the lack of a
+case sensitive file system.
+
+### Requirements
+
+You need the following tools to compile OpenWrt, the package names vary between
+distributions. A complete list with distribution specific packages is found in
+the [Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
+documentation.
+
+```
+binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev
+make4.1+ perl python3.7+ rsync subversion unzip which
+```
 
 ### Quickstart
 
